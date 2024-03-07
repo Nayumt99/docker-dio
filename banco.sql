@@ -1,0 +1,10 @@
+CREATE TABLE Alunos (
+    AlunoID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    Sobrenome VARCHAR(50) NOT NULL,
+    Endereco VARCHAR(150),
+    Cidade VARCHAR(50),
+    Host VARCHAR(50),
+    DataCadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT UC_NomeSobrenome UNIQUE (Nome, Sobrenome)
+);
